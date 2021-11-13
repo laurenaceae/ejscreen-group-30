@@ -18,9 +18,11 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
   clean_names()
 ```
 
-```{r Sam}
+```{r}
 ggplot(data= ces, aes(x=white_percent, y= ces_3_0_score)) + 
   geom_hex() + #create basic 2D hexbin
-  labs(x = "Percent White", y = "CalEnviroScreen Pollution Burden Score") # add axis labels
+  labs(x = "Percent White", y = "CalEnviroScreen Pollution Burden Score") + # add axis labels
+  scale_fill_gradient(low="powderblue", high ="springgreen4") + #update fill color gradient 
+  theme_minimal() # update the theme 
 ```
 
