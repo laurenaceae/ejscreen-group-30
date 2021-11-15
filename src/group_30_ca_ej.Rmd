@@ -5,24 +5,26 @@ date: "11/12/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 library(tidyverse)
 library(here)
 library(janitor)
 ```
-Read in data 
+
 ```{r}
+# read in data 
 ces <- read_csv(here("data", "ces3demographics.csv")) %>% 
-  clean_names()
+  clean_names() # clean name formats into lower snake
 ```
 
 ```{r}
 ggplot(data= ces, aes(x=white_percent, y= ces_3_0_score)) + 
   geom_hex() + #create basic 2D hexbin
-  labs(x = "Percent White", y = "CalEnviroScreen Pollution Burden Score") + # add axis labels
+  labs(x = "Percent White", y = "CalEnviroScreen Pollution Burden Score", fill = "Observations") + # add text labels
   scale_fill_gradient(low="powderblue", high ="springgreen4") + #update fill color gradient 
-  theme_minimal() # update the theme 
+  theme_minimal() # update the theme
 ```
 
+**Figure 1.** Relationship of CalEnviroScreen 3.0 (CES) pollution burden scores with percentages of white inhabitants. The CES 3.0 pollution burden score is a combination of high cumulative pollution burdens and highly vulnerable populations. CES 3.0 scores range from 0 - 100. Green areas indicate more overlapping observations.
