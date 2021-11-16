@@ -28,3 +28,8 @@ ggplot(data= ces, aes(x=white_percent, y= ces_3_0_score)) +
 ```
 
 **Figure 1.** Relationship of CalEnviroScreen 3.0 (CES) pollution burden scores with percentages of white inhabitants. The CES 3.0 pollution burden score is a combination of high cumulative pollution burdens and highly vulnerable populations. CES 3.0 scores range from 0 - 100. Green areas indicate more overlapping observations.
+
+There appears to be a negative correlation between CES 3.0 pollution burden scores and the percentage of inhabitants that identify as whites, indicating that communities with higher proportions of white residents are less likely to be negatively impacted by pollution.
+
+**Citation:** [1] Office of Environmental Health and Hazard Assessment, Approaches for Identifying Disadvantaged Communities 1 (Aug. 2014), available at
+[http://oehha.ca.gov/ej/pdf/ApproachesnIdentifyDisadvantagedCommunitiesAug2014.pdf](http://oehha.ca.gov/ej/pdf/ApproachesnIdentifyDisadvantagedCommunitiesAug2014.pdf)
